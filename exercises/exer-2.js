@@ -14,14 +14,15 @@ const { createAll } = require('../helpers/data.helper');
 const companies = createAll();
 
 function car(companies, hasCar){
-  for(i of companies){
+  const companiesCar = companies;
+  for(i of companiesCar){
     const users = i.users
     const userFilt =users.filter((el)=> el.car === hasCar)
 
     i.users = userFilt;
     i.usersLength = userFilt.length;
   }
-  return companies
+  return companiesCar
 }
 
 cleanConsole(2, companies);

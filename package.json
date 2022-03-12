@@ -1,0 +1,50 @@
+{
+  "name": "test-front-example",
+  "version": "1.0.0",
+  "description": "Prueba para el manejo de arreglos con JavaScript.",
+  "main": "main.js",
+  "scripts": {
+    "serve": "webpack serve --hot --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoftpymesRichard/test-front-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoftpymesRichard/test-front-example/issues"
+  },
+  "homepage": "https://github.com/SoftpymesRichard/test-front-example#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.2",
+    "eslint": "^7.20.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.2.0",
+    "node-sass": "^5.0.0",
+    "path": "^0.12.7",
+    "rxjs": "^6.6.3",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

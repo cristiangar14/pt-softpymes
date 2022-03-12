@@ -33,7 +33,7 @@ function mayus(companies){
     } else {
       userFirstName = userFirstName;
     }
-    if(u.firstName !=='' && !exp.test(u.lastName)){
+    if(u.lastName !=='' && !exp.test(u.lastName)){
       userLastName = false; 
     } else {
       userLastName = userLastName;

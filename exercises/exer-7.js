@@ -40,7 +40,7 @@ const juan = {
 
 function addUser (idCompany, newUser){
    const company = companies.filter(e => e.id === idCompany)
-   users = company[0].users;
+   const users = company[0].users;
    users.sort(((a, b) => a.id > b.id ? -1 : 1))
    newUser.id = users[0].id + 1;
    users.unshift(newUser)
@@ -49,14 +49,39 @@ function addUser (idCompany, newUser){
    return company
 }
 
+function removeUser(idCompany, idUser){
+   const company = companies.filter(e => e.id === idCompany)
+   const users = company[0].users;
+   const usersF = users.filter(u => u.id !== idUser)
+
+   company[0].users = usersF;
+   company[0].usersLength= users.length
+   return company;
+}
+
+function trasnFUser(compIni, compFin, idUser){
+   
+   
+   const searchUser = (compIni,idUser)=>{
+      let user = {}
+      const company = companies.filter(e => e.id === compIni);
+      const users = company[0].users;
+      const usersF = users.filter(u => u.id === idUser)
+      user = usersF;
+      return user
+   }
+   addUser (compFin, searchUser(compIni,idUser));
+   removeUser(compIni, idUser);
+   return companies
+}
 
 cleanConsole(7, companies);
 
 console.log('%c ---- RES 7 --- part 1', 'background: #bada55; color: #222', 'Put here your method: ',getCompany(3));
 console.log('%c ---- RES 7 --- part 2', 'background: #bada55; color: #222', 'Put here your method: ', excludeCompany(3));
 console.log('%c ---- RES 7 --- part 3', 'background: #bada55; color: #222', 'Put here your method: ', addUser(3, juan));
-console.log('%c ---- RES 7 --- part 4', 'background: #bada55; color: #222', 'Put here your method: ');
-console.log('%c ---- RES 7 --- part 5', 'background: #bada55; color: #222', 'Put here your method: ');
+console.log('%c ---- RES 7 --- part 4', 'background: #bada55; color: #222', 'Put here your method: ', removeUser(3, 10));
+console.log('%c ---- RES 7 --- part 5', 'background: #bada55; color: #222', 'Put here your method: ', trasnFUser(0,1,6));
 console.log('%c ---- RES 7 --- part 6', 'background: #bada55; color: #222', 'Put here your method: ');
 
 

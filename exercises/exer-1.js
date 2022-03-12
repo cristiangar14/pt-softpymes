@@ -26,9 +26,10 @@ function primeraMayuscula(str) {
 
 const companies1 =(companies)=>{
 
+  const comp = companies.slice();
   
 
-  for(i of companies){
+  for(i of comp){
     //primera mayuscula para el nombre de la compañia
     i.name = primeraMayuscula(i.name)
     //orden de las compañias
@@ -61,8 +62,8 @@ const companies1 =(companies)=>{
   }
 
 
-  companies.sort(((a, b) => a.totalUser > b.totalUser ? -1 : 1));
-  return companies
+  comp.sort(((a, b) => a.totalUser > b.totalUser ? -1 : 1));
+  return comp
   
 }
 
